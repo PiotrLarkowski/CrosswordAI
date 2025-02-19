@@ -73,6 +73,7 @@ class FindingWords {
         resetCrossword(startNumber);
         WordsDetails wordsDetails;
         Set<String> usedWords = new HashSet<>(); // Zbiór do przechowywania już wybranych słów
+        int numberOfSearchingWord = 0;
 
 //        int i;
 //        for (i = startNumber; i < endNumber; i++)
@@ -103,6 +104,7 @@ class FindingWords {
                         if (presentWord.charAt(presentWordsDetails.getConnectedWordsCount() - 1) ==
                                 firstWordToFit.charAt(presentWordsDetails.getConnectedWordsCount() - 1)) {
                             wordPass = true;
+                            break;
                         } else {
                             wordPass = false;
                             break;
